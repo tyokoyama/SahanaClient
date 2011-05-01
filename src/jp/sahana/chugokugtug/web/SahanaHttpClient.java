@@ -36,7 +36,9 @@ public class SahanaHttpClient {
 			iRet = response.getStatusLine().getStatusCode();
 			if(iRet == HttpStatus.SC_OK) {
 				entity = response.getEntity();
-				this.response = EntityUtils.toString(entity);				
+				byte[] bArray = EntityUtils.toByteArray(entity);
+				this.response = new String(bArray, "UTF-8");
+//				this.response = EntityUtils.toString(entity);				
 			}
 			
 		} catch(ClientProtocolException e) {

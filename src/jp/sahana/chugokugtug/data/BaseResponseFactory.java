@@ -14,13 +14,15 @@ public abstract class BaseResponseFactory {
 	
 	public BaseResponse create(String strResponse) {
 		
+		initialize();
+
 		parse(strResponse);
 		
 		return getResponse();
 	}
 	
 	private void parse(String strResponse) {
-		if(strResponse != null && strResponse.length() > 0) {
+		if(strResponse != null && strResponse.length() > 0) {			
 			try {
 				XmlPullParser parser = Xml.newPullParser();
 				parser.setInput(new StringReader(strResponse));
@@ -33,6 +35,7 @@ public abstract class BaseResponseFactory {
 						break;
 					case XmlPullParser.TEXT:
 						mText = parser.getText();
+						Log.d("TEST", mText);
 						break;
 					case XmlPullParser.END_TAG:
 						onEndTag(parser);
@@ -83,6 +86,7 @@ public abstract class BaseResponseFactory {
 		return strRet;
 	}
 	
+	protected abstract void initialize();
 	protected abstract void onStartTag(XmlPullParser parser);
 	protected abstract void onEndTag(XmlPullParser parser);
 	protected abstract BaseResponse getResponse();
