@@ -16,8 +16,7 @@ import android.widget.ListView;
 public class GetProjectListTask extends AsyncTask<Void, Void, Boolean> {
 	private ProgressDialog mDialog = null;
 	private ListView mList = null;
-	private ProjectList mPrjList;
-	ProjectListAdapter mPrjAdapter;
+	private ProjectListAdapter mPrjAdapter;
 	
 	public GetProjectListTask(Context context, ListView listView) {
 		mPrjAdapter = new ProjectListAdapter(context);
@@ -42,8 +41,12 @@ public class GetProjectListTask extends AsyncTask<Void, Void, Boolean> {
 		int iRet = client.getData("http://sahana.jp/eden/vol/project.xml");
 		if(iRet == HttpStatus.SC_OK) { 
 			ProjectListFactory factory = new ProjectListFactory();
-			mPrjList = (ProjectList)factory.create(client.getResponse());
-			
+			ProjectList prjList = (ProjectList)factory.create(client.getResponse());
+
+			for(Project prj : prjList.getArray()) {
+				mPrjAdapter.add(prj);
+			}
+
 			bRet = true;
 		}
 		
@@ -54,11 +57,9 @@ public class GetProjectListTask extends AsyncTask<Void, Void, Boolean> {
 	protected void onPostExecute(Boolean result) {
 		super.onPostExecute(result);
 		
-		for(Project prj : mPrjList.getArray()) {
-			mPrjAdapter.add(prj);
+		if(result) {
+			mList.setAdapter(mPrjAdapter);
 		}
-		
-		mList.setAdapter(mPrjAdapter);
 		
 		mDialog.dismiss();
 	}

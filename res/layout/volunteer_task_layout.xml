@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:id="@+id/txtsubject" android:textSize="20sp"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtdescription" android:layout_below="@+id/txtsubject"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtdescription" android:id="@+id/txtstatus"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtpriority" android:layout_below="@+id/txtstatus"></TextView>
+    <TextView android:layout_below="@+id/txtpriority" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txturgent" android:text="@string/txt_urgent"></TextView>
+</RelativeLayout>

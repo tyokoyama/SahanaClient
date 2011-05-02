@@ -3,6 +3,7 @@ package jp.sahana.chugokugtug;
 import jp.sahana.chugokugtug.async.GetProjectListTask;
 import jp.sahana.chugokugtug.data.Project;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,11 +16,6 @@ public class VolunteerActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.volunteer);
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
 		
 		ListView list = (ListView)findViewById(android.R.id.list);
 		mProjectTask = new GetProjectListTask(this, list);
@@ -27,8 +23,8 @@ public class VolunteerActivity extends ListActivity {
 	}
 
 	@Override
-	protected void onPause() {
-		super.onPause();
+	protected void onDestroy() {
+		super.onDestroy();
 		
 		if(mProjectTask != null && !mProjectTask.isCancelled()) {
 			mProjectTask.cancel(true);
@@ -40,7 +36,9 @@ public class VolunteerActivity extends ListActivity {
 		super.onListItemClick(l, v, position, id);
 		Project prj = (Project)l.getItemAtPosition(position);
 		if(prj != null) {
-			
+			Intent intent = new Intent(this, ProjectTaskActivity.class);
+			intent.putExtra("url", prj.getUrl() + "/task.xml");
+			startActivity(intent);
 		}
 	}
 	

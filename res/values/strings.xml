@@ -6,4 +6,9 @@
     <string name="txt_project_title">プロジェクト一覧</string>
     <string name="txt_between">〜</string>
     <string name="msg_project_list_wait">プロジェクト一覧取得中…</string>
+    <string name="txt_urgent">緊急</string>
+    <string name="msg_task_list_wait">タスク一覧取得中…</string>
+    <string name="txt_task_title">タスク一覧</string>
+    <string name="project_list_empty">プロジェクトが登録されていません。</string>
+    <string name="task_list_empty">タスクが登録されていません。</string>
 </resources>

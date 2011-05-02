@@ -5,4 +5,5 @@
   android:layout_height="match_parent">
     <TextView android:layout_height="wrap_content" android:id="@+id/txttitle" android:layout_width="match_parent" android:text="@string/txt_project_title" android:gravity="center" android:textSize="24sp"></TextView>
     <ListView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/android:list" android:layout_below="@+id/txttitle"></ListView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/android:empty" android:layout_below="@+id/txttitle" android:text="@string/project_list_empty"></TextView>
 </RelativeLayout>
