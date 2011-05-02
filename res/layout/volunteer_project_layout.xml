@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:id="@+id/txttitle" android:textSize="20sp"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:layout_below="@+id/txttitle" android:id="@+id/txtstartdate" android:layout_marginRight="10sp"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView1" android:layout_below="@+id/txttitle" android:layout_toRightOf="@+id/txtstartdate" android:layout_marginRight="10sp" android:text="@string/txt_between"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_toRightOf="@+id/textView1" android:layout_width="wrap_content" android:text="TextView" android:layout_alignTop="@+id/textView1" android:layout_alignBottom="@+id/textView1" android:id="@+id/txtenddate"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentRight="true" android:text="TextView" android:id="@+id/txtstatus" android:layout_alignParentBottom="true"></TextView>
+</RelativeLayout>

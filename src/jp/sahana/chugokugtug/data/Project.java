@@ -9,6 +9,8 @@ public class Project {
 	private String createDate;
 	private String modifyDate;
 	private String url;
+	private String startDate;
+	private String endDate;
 	public String getName() {
 		return name;
 	}
@@ -56,5 +58,17 @@ public class Project {
 	}
 	public void setStatusName(String statusName) {
 		this.statusName = statusName;
+	}
+	public String getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+	public String getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
 	}
 }

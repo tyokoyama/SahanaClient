@@ -35,7 +35,6 @@ public abstract class BaseResponseFactory {
 						break;
 					case XmlPullParser.TEXT:
 						mText = parser.getText();
-						Log.d("TEST", mText);
 						break;
 					case XmlPullParser.END_TAG:
 						onEndTag(parser);

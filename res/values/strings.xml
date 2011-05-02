@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">Sahanandroid</string>
+    <string name="txt_main_menu">メインメニュー</string>
+    <string name="btnVolunteer">ボランティア</string>
+    <string name="txt_project_title">プロジェクト一覧</string>
+    <string name="txt_between">〜</string>
+    <string name="msg_project_list_wait">プロジェクト一覧取得中…</string>
 </resources>

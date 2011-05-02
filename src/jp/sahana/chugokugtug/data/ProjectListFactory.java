@@ -21,7 +21,11 @@ public class ProjectListFactory extends BaseResponseFactory {
 				project.setCreateDate(getAttribute(parser, "created_on"));
 				project.setModifyDate(getAttribute(parser, "modified_on"));
 			} else {
-				project = null;
+				if(project != null) {
+					// project_project以外にもresourceタグのデータがあるため、閉じタグが来た時点でproject_projectのデータは完結したとみなす。
+					projectList.getArray().add(project);
+					project = null;
+				}
 			}
 			
 		} else if(strTagName.equals("data")) {
@@ -31,6 +35,10 @@ public class ProjectListFactory extends BaseResponseFactory {
 				if(field.equals("status")) {
 					// Statusは値は属性の中、文言はテキストにある。
 					project.setStatus(convertInt(getAttribute(parser, "value")));
+				} else if(field.equals("start_date")) {
+					project.setStartDate(getAttribute(parser, "value"));
+				} else if(field.equals("end_date")) {
+					project.setEndDate(getAttribute(parser, "value"));
 				}
 			}
 		}
@@ -46,8 +54,10 @@ public class ProjectListFactory extends BaseResponseFactory {
 				project.setStatusName(mText);
 			}
 		} else if(strTagName.equals("resource")) {
-			if(name.equals("project_project")) {
+			if(project != null) {
+				// project_project以外にもresourceタグのデータがあるため、閉じタグが来た時点でproject_projectのデータは完結したとみなす。
 				projectList.getArray().add(project);
+				project = null;
 			}
 		}
 		
