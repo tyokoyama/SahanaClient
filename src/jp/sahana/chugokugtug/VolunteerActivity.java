@@ -2,10 +2,10 @@ package jp.sahana.chugokugtug;
 
 import jp.sahana.chugokugtug.async.GetProjectListTask;
 import jp.sahana.chugokugtug.data.Project;
+import jp.sahana.chugokugtug.util.AppSetting;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
@@ -17,9 +17,11 @@ public class VolunteerActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.volunteer);
 		
+		AppSetting setting = new AppSetting(this);
+		
 		ListView list = (ListView)findViewById(android.R.id.list);
 		mProjectTask = new GetProjectListTask(this, list);
-		mProjectTask.execute();
+		mProjectTask.execute(setting.getSiteURL());
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.ListView;
 
-public class GetProjectListTask extends AsyncTask<Void, Void, Boolean> {
+public class GetProjectListTask extends AsyncTask<String, Void, Boolean> {
 	private ProgressDialog mDialog = null;
 	private ListView mList = null;
 	private ProjectListAdapter mPrjAdapter;
@@ -34,11 +34,12 @@ public class GetProjectListTask extends AsyncTask<Void, Void, Boolean> {
 	}
 
 	@Override
-	protected Boolean doInBackground(Void... params) {
+	protected Boolean doInBackground(String... params) {
+		String strUrl = params[0];
 		boolean bRet = false;
 		SahanaHttpClient client = new SahanaHttpClient();
 		
-		int iRet = client.getData("http://sahana.jp/eden/vol/project.xml");
+		int iRet = client.getData(strUrl + "/eden/vol/project.xml");
 		if(iRet == HttpStatus.SC_OK) { 
 			ProjectListFactory factory = new ProjectListFactory();
 			ProjectList prjList = (ProjectList)factory.create(client.getResponse());

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sahanandroid</string>
+    <string name="app_name">Sahanadroid</string>
     <string name="txt_main_menu">メインメニュー</string>
-    <string name="btnVolunteer">ボランティア</string>
+    <string name="btnvolunteer">ボランティア</string>
     <string name="txt_project_title">プロジェクト一覧</string>
     <string name="txt_between">〜</string>
     <string name="msg_project_list_wait">プロジェクト一覧取得中…</string>
@@ -11,4 +11,14 @@
     <string name="txt_task_title">タスク一覧</string>
     <string name="project_list_empty">プロジェクトが登録されていません。</string>
     <string name="task_list_empty">タスクが登録されていません。</string>
+    <string name="btnshelter">避難所一覧</string>
+    <string name="btnsetting">設定</string>
+    <string name="btncommit">更新</string>
+    <string name="btnback">戻る</string>
+    <string name="hint_setting_url">接続先URL</string>
+    <string name="hint_setting_username">Sahanaのユーザ名</string>
+    <string name="hint_setting_password">Sahanaのパスワード</string>
+    <string name="error_no_site_url">接続先URLが未入力です。</string>
+    <string name="error_no_username">Sahanaのユーザ名が未入力です。</string>
+    <string name="error_no_password">Sahanaのユーザ名が未入力です。</string>
 </resources>
