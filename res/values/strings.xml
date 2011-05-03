@@ -21,4 +21,6 @@
     <string name="error_no_site_url">接続先URLが未入力です。</string>
     <string name="error_no_username">Sahanaのユーザ名が未入力です。</string>
     <string name="error_no_password">Sahanaのユーザ名が未入力です。</string>
+    <string name="txt_shelter_title">避難所一覧</string>
+    <string name="shelter_list_empty">避難所が登録されていません。</string>
 </resources>

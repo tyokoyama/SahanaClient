@@ -1,5 +1,20 @@
 package jp.sahana.chugokugtug.data;
 
-public class ShelterList extends BaseResponse {
+import java.util.ArrayList;
 
+public class ShelterList extends BaseResponse {
+	private ArrayList<Shelter> array;
+
+	public ShelterList() {
+		array = new ArrayList<Shelter>();
+	}
+	
+	public ArrayList<Shelter> getArray() {
+		return array;
+	}
+
+	public void setArray(ArrayList<Shelter> array) {
+		this.array = array;
+	}
+	
 }

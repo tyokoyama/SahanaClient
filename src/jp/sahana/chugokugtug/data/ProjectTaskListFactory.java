@@ -76,4 +76,16 @@ public class ProjectTaskListFactory extends ResourceFactory {
 		}
 	}
 
+	@Override
+	protected void onStartReference(XmlPullParser parser) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+	@Override
+	protected void onEndReference(XmlPullParser parser) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
 }

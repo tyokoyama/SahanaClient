@@ -13,6 +13,8 @@ public abstract class ResourceFactory extends BaseResponseFactory {
 			onStartResource(parser);
 		} else if(strTagName.equals("data")) {
 			onStartData(parser);
+		} else if(strTagName.equals("reference")) {
+			onStartReference(parser);
 		}
 	}
 
@@ -23,6 +25,8 @@ public abstract class ResourceFactory extends BaseResponseFactory {
 			onEndResource(parser);			
 		} else if(strTagName.equals("data")) {
 			onEndData(parser);
+		} else if(strTagName.equals("reference")) {
+			onEndReference(parser);
 		}
 	}
 
@@ -34,4 +38,6 @@ public abstract class ResourceFactory extends BaseResponseFactory {
 	protected abstract void onEndResource(XmlPullParser parser);
 	protected abstract void onStartData(XmlPullParser parser);
 	protected abstract void onEndData(XmlPullParser parser);
+	protected abstract void onStartReference(XmlPullParser parser);
+	protected abstract void onEndReference(XmlPullParser parser);
 }
