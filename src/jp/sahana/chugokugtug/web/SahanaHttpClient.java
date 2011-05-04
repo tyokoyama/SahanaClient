@@ -42,9 +42,11 @@ public class SahanaHttpClient {
 			}
 			
 		} catch(ClientProtocolException e) {
-			Log.d(LOG_TAG, "Exception:", e);
+			Log.d(LOG_TAG, "ClientProtocolException:", e);
 		} catch(IOException ie) {
-			Log.d(LOG_TAG, "Exception:", ie);			
+			Log.d(LOG_TAG, "IOException:", ie);
+		} catch(IllegalStateException ille) {
+			Log.d(LOG_TAG, "IllegalStateException:", ille);
 		} finally {
 			try {
 				if(entity != null) entity.consumeContent();

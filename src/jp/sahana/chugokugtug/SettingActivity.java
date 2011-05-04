@@ -32,6 +32,14 @@ public class SettingActivity extends Activity {
 		
 		if(bCheckURL && bCheckUserName && bCheckPassword) {
 			EditText edit = (EditText)findViewById(R.id.editurl);
+			
+			// 先頭がhttp://で始まらない場合は、エラーにする。
+			String strUrl = edit.getText().toString().trim();
+			if(!strUrl.startsWith("http://")) {
+				edit.setError(getString(R.string.error_no_schema_url));
+				return;
+			}
+			
 			setting.setSiteURL(edit.getText().toString().trim());
 			edit = (EditText)findViewById(R.id.editusername);
 			setting.setUserName(edit.getText().toString().trim());
