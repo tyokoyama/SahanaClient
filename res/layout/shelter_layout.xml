@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:id="@+id/txtname" android:textSize="18sp"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/txtname" android:text="TextView" android:id="@+id/txtaddress"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:id="@+id/txttype" android:layout_below="@+id/txtaddress" android:layout_marginRight="10sp" android:layout_toLeftOf="@+id/txtservice"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:layout_below="@+id/txtaddress" android:layout_alignParentRight="true" android:id="@+id/txtservice"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/txtservice" android:text="TextView" android:id="@+id/txtmodifiedby" android:layout_toLeftOf="@+id/txtmodifieddate" android:layout_marginRight="10sp"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:layout_alignBottom="@+id/txtmodifiedby" android:id="@+id/txtmodifieddate" android:layout_alignParentRight="true"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/txtmodifieddate" android:id="@+id/txtcapacity_title" android:text="@string/txt_capacity_title" android:layout_marginRight="10sp" android:layout_toLeftOf="@+id/txtcapacity"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:layout_below="@+id/txtmodifieddate" android:layout_alignParentRight="true" android:id="@+id/txtcapacity"></TextView>
+</RelativeLayout>

@@ -34,9 +34,11 @@ public class ShelterListFactory extends ResourceFactory {
 	@Override
 	protected void onEndResource(XmlPullParser parser) {
 		int depth = parser.getDepth();
-		if(mDepth == depth) {
-			mList.getArray().add(mShelter);
-			mShelter = null;
+		if(mShelter != null) {
+			if(mDepth == depth) {
+				mList.getArray().add(mShelter);
+				mShelter = null;
+			}
 		}
 	}
 
@@ -55,20 +57,43 @@ public class ShelterListFactory extends ResourceFactory {
 		if(mShelter != null) {
 			if(field.equals("name")) {
 				mShelter.setName(mText);
+			} else if(field.equals("building_name")) {
+				mShelter.setBuilding_name(mText);
+			} else if(field.equals("address")) {
+				mShelter.setAddress(mText);
+			} else if(field.equals("L3")) {
+				mShelter.setL3(mText);
+			} else if(field.equals("L2")) {
+				mShelter.setL2(mText);
+			} else if(field.equals("L1")) {
+				mShelter.setL1(mText);
+			} else if(field.equals("L0")) {
+				mShelter.setL0(mText);
+			} else if(field.equals("source")) {
+				mShelter.setSource(mText);
+			} else if(field.equals("comments")) {
+				mShelter.setComments(mText);
 			}
 		}
 	}
 
 	@Override
 	protected void onStartReference(XmlPullParser parser) {
-		// TODO 自動生成されたメソッド・スタブ
+		if(mShelter != null) {
+			field = getAttribute(parser, "field");
+		}
 		
 	}
 
 	@Override
 	protected void onEndReference(XmlPullParser parser) {
-		// TODO 自動生成されたメソッド・スタブ
-		
+		if(mShelter != null) {
+			if(field.equals("shelter_type_id")) {
+				mShelter.setShelter_type_id(mText);
+			} else if(field.equals("shelter_service_id")) {
+				mShelter.setShelter_service_id(mText);
+			}
+		}
 	}
 
 }

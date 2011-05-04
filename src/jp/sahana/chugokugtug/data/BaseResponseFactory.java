@@ -10,6 +10,7 @@ import android.util.Log;
 import android.util.Xml;
 
 public abstract class BaseResponseFactory {
+	private static final String LOG_TAG = "SahanaClient";
 	protected String mText;
 	
 	public BaseResponse create(String strResponse) {
@@ -43,7 +44,7 @@ public abstract class BaseResponseFactory {
 				}
 				
 			} catch(Exception e) {
-				Log.d("TEST", "Exception:", e);
+				Log.d(LOG_TAG, "Exception:", e);
 			}
 			
 		}

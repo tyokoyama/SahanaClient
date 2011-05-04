@@ -23,4 +23,7 @@
     <string name="error_no_password">Sahanaのユーザ名が未入力です。</string>
     <string name="txt_shelter_title">避難所一覧</string>
     <string name="shelter_list_empty">避難所が登録されていません。</string>
+    <string name="txt_capacity_title">収容可能数（最大人数）</string>
+    <string name="txt_capacity_format">%d人</string>
+    <string name="msg_shelter_list_wait">避難所一覧取得中…</string>
 </resources>

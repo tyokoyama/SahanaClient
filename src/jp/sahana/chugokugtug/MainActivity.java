@@ -24,7 +24,8 @@ public class MainActivity extends Activity {
     }
     
     public void shelterClick(View view) {
-    	
+    	Intent intent = new Intent(this, ShelterActivity.class);
+    	startActivity(intent);
     }
     
     public void settingClick(View view) {
