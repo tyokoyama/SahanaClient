@@ -39,7 +39,7 @@ public class GetShelterTask extends AsyncTask<String, Void, Boolean> {
 		String strUrl = param[0];
 		
 		SahanaHttpClient client = new SahanaHttpClient();
-		int iRet = client.getData(strUrl + "/eden/cr/shelter.xml");
+		int iRet = client.get(strUrl + "/eden/cr/shelter.xml");
 		if(iRet == HttpStatus.SC_OK) {
 			ShelterListFactory factory = new ShelterListFactory();
 			ShelterList list = (ShelterList)factory.create(client.getResponse());

@@ -39,7 +39,7 @@ public class GetProjectListTask extends AsyncTask<String, Void, Boolean> {
 		boolean bRet = false;
 		SahanaHttpClient client = new SahanaHttpClient();
 		
-		int iRet = client.getData(strUrl + "/eden/vol/project.xml");
+		int iRet = client.get(strUrl + "/eden/vol/project.xml");
 		if(iRet == HttpStatus.SC_OK) { 
 			ProjectListFactory factory = new ProjectListFactory();
 			ProjectList prjList = (ProjectList)factory.create(client.getResponse());

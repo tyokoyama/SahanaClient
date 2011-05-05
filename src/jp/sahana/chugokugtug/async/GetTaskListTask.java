@@ -39,7 +39,7 @@ public class GetTaskListTask extends AsyncTask<String, Void, Boolean> {
 		
 		boolean bRet = false;
 		SahanaHttpClient client = new SahanaHttpClient();
-		int iRet = client.getData(url);
+		int iRet = client.get(url);
 		if(iRet == HttpStatus.SC_OK) { 
 			ProjectTaskListFactory factory = new ProjectTaskListFactory();
 			ProjectTaskList list = (ProjectTaskList)factory.create(client.getResponse());
