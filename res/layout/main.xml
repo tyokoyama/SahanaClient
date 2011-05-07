@@ -7,5 +7,6 @@
     <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:text="@string/txt_main_menu" android:textSize="24sp"></TextView>
     <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="volunteerClick" android:id="@+id/btnvolunteer" android:text="@string/btnvolunteer"></Button>
     <Button android:id="@+id/btnshelter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btnshelter" android:onClick="shelterClick"></Button>
+    <Button android:layout_height="wrap_content" android:id="@+id/btnrequest" android:layout_width="match_parent" android:text="@string/btnrequest" android:onClick="requestClick"></Button>
     <Button android:layout_height="wrap_content" android:id="@+id/btnsetting" android:text="@string/btnsetting" android:layout_width="match_parent" android:onClick="settingClick"></Button>
 </LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:layout_alignParentLeft="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:id="@+id/txtdate"></TextView>
+    <TextView android:layout_below="@+id/txtdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:id="@+id/txttype"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:layout_below="@+id/txttype" android:id="@+id/txtcommit_status"></TextView>
+    <TextView android:layout_below="@+id/txtcommit_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:id="@+id/txttransit_status"></TextView>
+    <TextView android:layout_below="@+id/txttransit_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:id="@+id/txtfulfil_status"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtcancel" android:layout_below="@+id/txtfulfil_status" android:text="@string/txt_cancel"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:id="@+id/txtmodifiedby" android:layout_toLeftOf="@+id/txtmodifieddate" android:layout_marginRight="10sp" android:layout_below="@+id/txtcancel"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="TextView" android:layout_alignBottom="@+id/txtmodifiedby" android:id="@+id/txtmodifieddate" android:layout_alignParentRight="true"></TextView>
+</RelativeLayout>

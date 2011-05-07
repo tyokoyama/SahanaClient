@@ -33,6 +33,11 @@ public class MainActivity extends Activity {
     	startActivityForResult(intent, SETTING_REQUEST);
     }
 
+    public void requestClick(View view) {
+    	Intent intent = new Intent(this, RequestActivity.class);
+    	startActivity(intent);
+    }
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);

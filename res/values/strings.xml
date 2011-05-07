@@ -27,4 +27,9 @@
     <string name="txt_capacity_format">%d人</string>
     <string name="msg_shelter_list_wait">避難所一覧取得中…</string>
     <string name="error_no_schema_url">接続先に&quot;http://&quot;が付いているか確認して下さい。</string>
+    <string name="txt_request_title">支援要請一覧</string>
+    <string name="txt_request_empty">支援要請されていません。</string>
+    <string name="msg_request_list_wait">支援要請一覧取得中…</string>
+    <string name="txt_cancel">キャンセル済</string>
+    <string name="btnrequest">支援要請</string>
 </resources>

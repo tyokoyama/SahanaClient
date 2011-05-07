@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="jp.sahana.chugokugtug"
-      android:versionCode="2" android:versionName="0.1.0">
+      android:versionName="0.1.1" android:versionCode="3">
     <uses-sdk android:minSdkVersion="8" />
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
@@ -17,6 +17,7 @@
         <activity android:name="ProjectTaskActivity"></activity>
         <activity android:name="SettingActivity"></activity>
         <activity android:name="ShelterActivity"></activity>
+        <activity android:name="RequestActivity"></activity>
 
     </application>
 </manifest>
