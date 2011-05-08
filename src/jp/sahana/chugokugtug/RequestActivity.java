@@ -16,10 +16,10 @@ public class RequestActivity extends ListActivity {
 		setContentView(R.layout.volunteer);
 		
 		TextView txtTitle = (TextView)findViewById(R.id.txttitle);
-		txtTitle.setText(R.string.txt_shelter_title);
+		txtTitle.setText(R.string.txt_request_title);
 		
 		TextView txtEmpty = (TextView)findViewById(android.R.id.empty);
-		txtEmpty.setText(R.string.shelter_list_empty);
+		txtEmpty.setText(R.string.txt_request_empty);
 
 		AppSetting setting = new AppSetting(this);
 		
