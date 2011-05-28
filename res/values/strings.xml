@@ -32,4 +32,21 @@
     <string name="msg_request_list_wait">支援要請一覧取得中…</string>
     <string name="txt_cancel">キャンセル済</string>
     <string name="btnrequest">支援要請</string>
+    <string name="txt_quantity">数量</string>
+    <string name="txt_quantity_commit">Quantity Commit</string>
+    <string name="txt_quantity_transit">Quantity Transit</string>
+    <string name="txt_quantity_fulfil">Quantity Fulfil</string>
+    <string name="txt_item_title">物資</string>
+    <string name="txt_comment">コメント</string>
+    <string name="hint_item_name">物資の番号を入力</string>
+    <string name="hint_quantity">数量を入力</string>
+    <string name="hint_comment">コメントを入力</string>
+    <string name="btn_input">登録</string>
+    <string name="txt_request_item_title">救援物資の登録</string>
+    <string name="error_no_item">物資の番号が未入力です。</string>
+    <string name="error_no_quantity">数量が未入力です。</string>
+    <string name="error_miss_quantity">数量は１以上を入力して下さい。</string>
+    <string name="msg_update_success">登録しました。</string>
+    <string name="msg_request_item_update_wait">救援物資の登録中…</string>
+    <string name="msg_update_failure">物資の登録に失敗しました…</string>
 </resources>

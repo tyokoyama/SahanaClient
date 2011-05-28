@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_alignParentLeft="true" android:layout_height="wrap_content" android:id="@+id/txt_name" android:textSize="20sp"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_below="@+id/txt_name" android:layout_marginRight="10sp" android:text="@string/txt_quantity"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_toRightOf="@+id/textView1" android:layout_height="wrap_content" android:layout_below="@+id/txt_name" android:id="@+id/txtquantity"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtquantitycommit" android:layout_below="@+id/txtquantity" android:layout_toRightOf="@+id/textView2"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtquantitycommit" android:id="@+id/txtquantitytransit" android:layout_toRightOf="@+id/textView3"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtquantitytransit" android:id="@+id/txtquantityfulfil" android:layout_toRightOf="@+id/textView4" android:text="@string/txt_quantity_commit"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_alignLeft="@+id/textView1" android:layout_below="@+id/textView1" android:layout_marginRight="10sp" android:text="@string/txt_quantity_commit"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_below="@+id/textView2" android:layout_marginRight="10sp" android:text="@string/txt_quantity_transit"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_below="@+id/textView3" android:layout_marginRight="10sp" android:text="@string/txt_quantity_fulfil"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtcomment" android:layout_below="@+id/textView4"></TextView>
+    <TextView android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtcomment" android:id="@+id/txt_modified_by" android:layout_alignParentRight="true"></TextView>
+</RelativeLayout>

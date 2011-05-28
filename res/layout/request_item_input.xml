@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical">
+    <TextView android:id="@+id/textView4" android:layout_height="wrap_content" android:text="@string/txt_request_item_title" android:textSize="24sp" android:layout_width="match_parent" android:gravity="center"></TextView>
+    <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_item_title"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/edititem" android:hint="@string/hint_item_name" android:inputType="number"></EditText>
+    <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_quantity"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editquantity" android:hint="@string/hint_quantity" android:inputType="numberDecimal"></EditText>
+    <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_comment"></TextView>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/editcomment" android:hint="@string/hint_comment"></EditText>
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_weight="1.0" android:layout_height="match_parent" android:gravity="bottom">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnback" android:text="@string/btnback" android:onClick="btnBackClick"></Button>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btninput" android:inputType="number" android:text="@string/btn_input" android:onClick="btnInputClick"></Button>
+    </LinearLayout>
+</LinearLayout>
